@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
 
     video.volume = 0.5;
     document.querySelector("#slider").value = 50;
-    document.querySelector("#volume").textContent = 50;
+    document.querySelector("#volume").textContent = "50%";
 
     console.log("Autoplay is " + video.autoplay);
     console.log("Loop is " + video.loop);
@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
 document.querySelector("#play").addEventListener("click", function () {
     console.log("Play Video");
     video.play();
-    document.querySelector("#volume").textContent = video.volume * 100;
+    document.querySelector("#volume").textContent = (video.volume * 100) + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function () {
@@ -64,7 +64,7 @@ document.querySelector("#mute").addEventListener("click", function () {
 document.querySelector("#slider").addEventListener("input", function () {
     let volumeValue = document.querySelector("#slider").value;
     video.volume = volumeValue / 100;
-    document.querySelector("#volume").textContent = volumeValue;
+    document.querySelector("#volume").textContent = volumeValue + "%";
 });
 
 document.querySelector("#vintage").addEventListener("click", function () {
