@@ -9,10 +9,6 @@ window.addEventListener("load", function () {
     video.loop = false;
     video.pause();
 
-    video.volume = 0.5;
-    document.querySelector("#slider").value = 50;
-    document.querySelector("#volume").textContent = "50%";
-
     console.log("Autoplay is " + video.autoplay);
     console.log("Loop is " + video.loop);
 });
